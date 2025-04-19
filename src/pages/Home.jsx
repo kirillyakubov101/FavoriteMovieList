@@ -2,7 +2,11 @@ import { useState, useEffect } from "react";
 import MovieCard from "../components/MovieCard";
 import "../css/Home.css";
 
-import { getPopularMovies, searchMovies } from "../services/api";
+import {
+  getPopularMovies,
+  newGetPopularMovies,
+  newSearchMovies,
+} from "../services/api";
 
 const Home = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -13,7 +17,7 @@ const Home = () => {
   const loadPopularMovies = async () => {
     setLoading(true);
     try {
-      const popularMovies = await getPopularMovies();
+      const popularMovies = await newGetPopularMovies();
       setMovies(popularMovies);
     } catch (err) {
       console.log(err);
@@ -37,7 +41,7 @@ const Home = () => {
 
     setLoading(true);
     try {
-      const searchResults = await searchMovies(searchQuery);
+      const searchResults = await newSearchMovies(searchQuery);
       setMovies(searchResults);
       setError(null);
     } catch (err) {
