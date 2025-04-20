@@ -23,3 +23,7 @@ React
 Vite
 TMDB API
 CSS Modules
+
+
+![1](https://github.com/user-attachments/assets/657048fe-d652-46e6-bebc-9d04fd9ec835)
+![2](https://github.com/user-attachments/assets/a016ded2-c96f-4080-a574-9dc8cb0a1f13)
